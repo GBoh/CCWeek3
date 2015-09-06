@@ -1,0 +1,37 @@
+﻿@model PhotoAlbum.Models.AlbumDisplayViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2>@Model.Title</h2>
+
+<div class="row">
+    @if (Model.Photos != null) {
+        for (int i = 0; i < Model.Photos.Count; i++) {
+            <div class="col-md-3">
+                <div class="row">
+                    @Model.Photos[i].Title
+                </div>
+                <div class="row">
+                    @Model.Photos[i].ImageURL
+        </div>
+    </div>
+        }
+    }
+    <div class="col-md-11">
+        <h4>Your album seems empty, you should add some photos</h4>
+    </div>
+    <div class="col-md-1">
+        @Html.ActionLink("Add Photos", "UploadPhotos", "Photo", new { id = Model.Title}, null)
+    </div>
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

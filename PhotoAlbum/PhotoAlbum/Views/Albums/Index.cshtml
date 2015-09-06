@@ -1,0 +1,43 @@
+﻿@model IEnumerable<PhotoAlbum.Service.AlbumDTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>Number of photos</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @{ 
+                if(item.Photos == null) {
+                    <text>0</text>
+                }
+                <text>@item.Photos.Count</text>
+            }
+        </td>
+        <td></td>
+        <td>
+            @Html.ActionLink("View photos", "Display", new { id=item.Title }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+        </td>
+    </tr>
+}
+
+</table>

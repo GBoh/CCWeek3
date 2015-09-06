@@ -1,0 +1,35 @@
+﻿@model PhotoAlbum.Service.PhotoDTO
+
+@{
+    ViewBag.Title = "Upload Photos";
+}
+
+<h2>Upload Photos</h2>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row form-group">
+            <div class="col-md-2">@Html.LabelFor(model => model.Title)</div>
+            <div class="col-md-10">@Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })</div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-2">@Html.LabelFor(model => model.Rating)</div>
+            <div class="col-md-10">@Html.EditorFor(model => model.Rating, new { htmlAttributes = new { @class = "form-control" } })</div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            @Html.LabelFor(model => model.Description)
+            @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    @using (Html.BeginForm("UploadPhotos", "Photo", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+        <input type="file" name="file" id="file" />
+        <input type="submit" value="Upload" />
+    }
+</div>
+

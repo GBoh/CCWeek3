@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityWoot", "IdentityWoot\IdentityWoot.csproj", "{4175C358-F0C4-4490-BBEA-222CD74D0A68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityWoot.Tests", "IdentityWoot.Tests\IdentityWoot.Tests.csproj", "{7DA02243-19D6-489C-A45F-31824172EDD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4175C358-F0C4-4490-BBEA-222CD74D0A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4175C358-F0C4-4490-BBEA-222CD74D0A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4175C358-F0C4-4490-BBEA-222CD74D0A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4175C358-F0C4-4490-BBEA-222CD74D0A68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA02243-19D6-489C-A45F-31824172EDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA02243-19D6-489C-A45F-31824172EDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA02243-19D6-489C-A45F-31824172EDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA02243-19D6-489C-A45F-31824172EDD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
